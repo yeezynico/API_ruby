@@ -7,3 +7,14 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+User.create!(
+    email: "nico@gmail.com",
+    password: "123456"
+)
+
+30.times do     Article.create!(         
+    title: Faker::Quote.most_interesting_man_in_the_world,         
+    content: Faker::TvShows::BojackHorseman.quote,
+    user_id: 1
+    ) end
